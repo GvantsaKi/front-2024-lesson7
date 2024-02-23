@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+div{
+	display: inline-block;
+}
+.img1-run{
+	width: 100%;
+	position: absolute;
+	animation-name: movetoright;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	overflow: hidden;
+}
+.img2-run{
+	width: 100%;
+	position: absolute;
+	animation-name: movetoleft;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	overflow: hidden;
+}
+
+@keyframes movetoright {
+    0% {
+    left: 0;
+  }
+  50% { 
+    left: calc(100% - 100px); 
+   }
+  100% {
+    left: 0;     
+  }
+}
+
+@keyframes movetoleft {
+    0% {left:calc(100% + 100px);}
+    100% {left:calc(0% - 100px);}
